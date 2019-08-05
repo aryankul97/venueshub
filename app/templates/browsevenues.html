@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VenuesHub</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/open-iconic-bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/animate.css" %}">
+    <link rel="stylesheet" href="{% static "css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "css/aos.css" %}">
+    <link rel="stylesheet" href="{% static "css/ionicons.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap-datepicker.css" %}">
+    <link rel="stylesheet" href="{% static "css/jquery.timepicker.css" %}">
+    <link rel="stylesheet" href="{% static "css/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "css/icomoon.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static "css/slider.css" %}">
+  </head>
+  <body>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">VenuesHub</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="rooms.html" class="nav-link">Events</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Browse Venues</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+
+
+  
+  <div class="block-30 block-30-sm item" style="background-image: url({% static 'images/bg_2.jpg' %});" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-10">
+          <span class="subheading-sm">Venues</span>
+          <h2 class="heading">Hotels & Resorts</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+   
+
+    
+    <div class="site-section bg-light">
+      <div class="container">
+      
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+]
+</style>
+<body>
+
+<div class="row mb-5 pt-5 justify-content-center">
+            <div class="col-md-7 text-center section-heading">
+              <h2 class="heading">Trending Venues</h2>
+             </div>
+          </div>
+
+
+<div class="w3-content w3-section" style="max-width:1200px;">
+  <img class="mySlides w3-animate-left" src="{% static "images/s1.png" %}" style="width:100%">
+  <img class="mySlides w3-animate-left" src="{% static "images/s1.png" %}" style="width:100%">
+  <img class="mySlides w3-animate-left" src="{% static "images/s1.png" %}" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:50%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000);    
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+
+</script>
+
+        <div class="row mb-5 pt-5 justify-content-center">
+            <div class="col-md-7 text-center section-heading">
+              <h2 class="heading">Book Venue Here</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, iusto, omnis! Quidem, sint, impedit? Dicta eaque delectus tempora hic, corporis velit doloremque quod quam laborum, nobis iusto autem culpa quaerat!</p>
+            </div>
+          </div>
+        
+        <div class="row">
+          {% for x in hdata %}
+          <div class="col-lg-4 mb-5">
+            <div class="block-34">
+              <div class="image">
+                <img src="{{ x.Image_Path|safe }}" alt="Image placeholder">
+              </div>
+              <div class="text">
+                <h2 class="heading">{{ x.Hotel_Name|safe }}</h2>
+                <div class="price"><sup>Rs.</sup><span class="number">{{ x.Hotel_Price|safe }}</span><sub>/{{ x.Hotel_PriceType|safe }}</sub></div>
+                <ul class="specs mb-5">
+                  <li><strong>City:</strong> {{ x.Hotel_City|safe }}</li>
+                  <li><strong>Area:</strong> {{ x.Hotel_Area|safe }}</li>
+                  <li><strong>Gathering Capacity:</strong> {{ x.Hotel_Max_Gathering|safe }}</li>
+                </ul>
+                <form method="POST" action="/moreinfo/">
+                  <input type="hidden" value="{{ x.Hotel_ID|safe }}" name="vID">
+                  <input type="submit" value="More Info" class="btn btn-primary py-3 px-5">
+                </form>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+  
+<!--    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-7 section-heading">
+            <span class="subheading-sm">Reviews</span>
+            <h2 class="heading">Guest Reviews</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+
+            <div class="block-33">
+              <div class="vcard d-flex mb-3">
+                <div class="image align-self-center"><img src="{% static "images/person_3.jpg" %}" alt="Person here"></div>
+                <div class="name-text align-self-center">
+                  <h2 class="heading">Martin Newmansfield</h2>
+                  <span class="meta">Satisfied Customer</span>
+                </div>
+              </div>
+              <div class="text">
+                <blockquote>
+                  <p>&rdquo; Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid. Atque dolore esse veritatis iusto eaque perferendis non dolorem fugiat voluptatibus vitae error ad itaque inventore accusantium tempore dolores sunt. &ldquo;</p>
+                </blockquote>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 col-lg-4">
+
+            <div class="block-33">
+              <div class="vcard d-flex mb-3">
+                <div class="image align-self-center"><img src="{% static "images/person_2.jpg" %}" alt="Person here"></div>
+                <div class="name-text align-self-center">
+                  <h2 class="heading">Nancy Green</h2>
+                  <span class="meta">Satisfied Customer</span>
+                </div>
+              </div>
+              <div class="text">
+                <blockquote>
+                  <p>&rdquo; Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid. Atque dolore esse veritatis iusto eaque perferendis non dolorem fugiat voluptatibus vitae error ad itaque inventore accusantium tempore dolores sunt. &ldquo;</p>
+                </blockquote>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 col-lg-4">
+
+            <div class="block-33">
+              <div class="vcard d-flex mb-3">
+                <div class="image align-self-center"><img src="{% static "images/person_1.jpg" %}" alt="Person here"></div>
+                <div class="name-text align-self-center">
+                  <h2 class="heading">Elizabeth Charles</h2>
+                  <span class="meta">Satisfied Customer</span>
+                </div>
+              </div>
+              <div class="text">
+                <blockquote>
+                  <p>&rdquo; Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid. Atque dolore esse veritatis iusto eaque perferendis non dolorem fugiat voluptatibus vitae error ad itaque inventore accusantium tempore dolores sunt. &ldquo;</p>
+                </blockquote>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+  <div class="block-22">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="heading mb-4">Be Sure To Get Our Promos</h2>
+            <form action="#" class="subscribe">
+              <div class="form-group">
+                <input type="email" class="form-control email" placeholder="Enter your email">
+                <!-- <input type="submit" class="btn btn-primary submit"> -->
+                <button type="submit" class="btn btn-primary submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">About Us</h3>
+          <p class="mb-5">Our motive is to provide customer to book unique spaces for corporate and private events including weddings, parties, meetings, get together, dinners, lunch and breakfast events as well as summer & christmas parties. Find the best event venues. View images and find best prices.</p>
+          <p><a href="#" class="btn btn-primary px-4">Know More</a></p>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h3 class="heading-section">Blog</h3>
+          <div class="block-21 d-flex mb-4">
+            <figure class="mr-3">
+              <img src="{% static "images/banquets.jpg" %}" alt="" class="img-fluid">
+            </figure>
+            <div class="text">
+              <h3 class="heading"><a href="#">Our Luxury Banquets</a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-21 d-flex mb-4">
+            <figure class="mr-3">
+              <img src="{% static "images/hotel1.jpg" %}" alt="" class="img-fluid">
+            </figure>
+            <div class="text">
+              <h3 class="heading"><a href="#">Our Luxury Hotels</a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-21 d-flex mb-4">
+            <figure class="mr-3">
+              <img src="{% static "images/restraunt1.jpg" %}" alt="" class="img-fluid">
+            </figure>
+            <div class="text">
+              <h3 class="heading"><a href="#">Our Luxury Restaurants</a></h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> May 29, 2018</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="block-23">
+            <h3 class="heading-section">Contact Info</h3>
+              <ul>
+                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 7417358703</span></a></li>
+                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@venueshub.in</span></a></li>
+                <li><span class="icon icon-globe"></span><span class="text">www.venueshub.in</span></li>
+              </ul>
+            </div>
+        </div>
+        
+        
+      </div>
+        <div class="col-md-12 text-left">
+          <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+           Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved @ Venueshub.in
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+      </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static "js/jquery.min.js" %}"></script>
+  <script src="{% static "js/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "js/popper.min.js" %}"></script>
+  <script src="{% static "js/bootstrap.min.js" %}"></script>
+  <script src="{% static "js/jquery.easing.1.3.js" %}"></script>
+  <script src="{% static "js/jquery.waypoints.min.js" %}"></script>
+  <script src="{% static "js/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "js/owl.carousel.min.js" %}"></script>
+  <script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+  <script src="{% static "js/bootstrap-datepicker.js" %}"></script>
+  
+  <script src="{% static "js/aos.js" %}"></script>
+  <script src="{% static "js/jquery.animateNumber.min.js" %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static "js/google-map.js" %}"></script>
+  <script src="{% static "js/main.js" %}"></script>
+    
+  </body>
+</html>
